@@ -36,6 +36,7 @@ counterButton.addEventListener("click", function () {
    */
 
   let counterValue = Number(countspan.innerHTML) + 1;
+  countspan.innerHTML = counterValue;
 });
 
 const evenOrOddButton = document.querySelector("#even-or-odd-button");
@@ -46,4 +47,13 @@ evenOrOddButton.addEventListener("click", function () {
    * alert dialog stating whether the count variable
    * (from part 2, above) is even or odd.
    */
+
+  let counterValue = Number(countspan.innerHTML);
+  console.log(counterValue % 2);
+
+  if (counterValue % 2 === 0) {
+    alert("Even");
+  } else {
+    alert("Odd");
+  }
 });
